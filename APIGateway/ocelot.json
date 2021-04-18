@@ -1,0 +1,90 @@
+{
+  "Routes": [
+    //Contact
+    {
+      "DownstreamPathTemplate": "/api/contact/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44308
+        }
+      ],
+      "UpstreamPathTemplate": "/c/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    //Reservation
+    {
+      "DownstreamPathTemplate": "/api/res/{id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44306
+        }
+      ],
+      "UpstreamPathTemplate": "/r/{id}",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+
+  ]
+}
+
+//{
+//  "GlobalConfiguration": {
+//    "BaseUrl": "http://c_apigateway"
+//  },
+//  "Routes": [
+//    {
+//      "UpstreamPathTemplate": "/contact/{everything}",
+//      "UpstreamHttpMethod": [ "Get", "Post" ],
+
+//      "DownstreamPathTemplate": "/api/contact/{everything}",
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "c_contact_api",
+//          "Port": 7000
+//        }
+//      ]
+//    },
+//    {
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "c_contact_api",
+//          "Port": 7000
+//        }
+//      ],
+//      "DownstreamPathTemplate": "/api/contact",
+//      "DownstreamScheme": "http",
+//      "UpstreamHttpMethod": [ "Get", "Post" ],
+//      "UpstreamPathTemplate": "/contact"
+//    },
+//    {
+//      "UpstreamPathTemplate": "/res/{everything}",
+//      "UpstreamHttpMethod": [ "Get", "Post" ],
+
+//      "DownstreamPathTemplate": "/api/reservation/{everything}",
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "c_res_api",
+//          "Port": 7001
+//        }
+//      ]
+//    },
+//    {
+//      "UpstreamPathTemplate": "/res",
+//      "UpstreamHttpMethod": [ "Get", "Post" ],
+
+//      "DownstreamPathTemplate": "/api/reservation",
+//      "DownstreamScheme": "http",
+//      "DownstreamHostAndPorts": [
+//        {
+//          "Host": "c_res_api",
+//          "Port": 7001
+//        }
+//      ]
+//    }
+//  ]
+//}
